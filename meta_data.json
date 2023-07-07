@@ -1,0 +1,12 @@
+{
+    "categories": {
+        "0": "analytics"
+    },
+    "description": "Esse plugin foi criado para utilização da FTP-API. \n\nEssa API permite que você controle quase todos os aspectos de suas operações de servidor FTP / SFTP programaticamente, desde upload e download de arquivos até transferência e exclusões com base em operações GET, POST e DELETE.\n\nPara postar arquivos no servidor FTP/SFTP, ou para OBTER/EXCLUIR arquivos do servidor FTP/SFTP, você precisará de alguns detalhes básicos como: nome de usuário, senha, porta e URL do host para fazer login no servidor FTP/SFTP. A API REST usa JSON simples sobre HTTP.\n\nEste é um plugin NÃO OFICIAL, foi desenvolvido por Cláudio Éden / W3PD Agency.",
+    "image": "//s3.amazonaws.com/appforest_uf/f1675125583213x911370288250204400/Capturar.PNG",
+    "license": "open_source",
+    "link": "https://www.ftp-api.com/",
+    "name": "FTP-API",
+    "plugin_instructions": "Para detalhes e entendimento de como funciona a API, consulte o site oficial em https://www.ftp-api.com/.\n\nOutros detalhes e instruções, estão no próprio plugin, clicando em Documentation nas telas de chamada aos endpoints.",
+    "sa_node_version": 14
+}

@@ -1,0 +1,21 @@
+{
+    "caption": "Base64 Upload to Bubble",
+    "fields": {
+        "AAp": {
+            "caption": "File Name",
+            "doc": "insert the file name here",
+            "editor": "DynamicValue",
+            "name": "file_name",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAq": {
+            "caption": "Base64 String",
+            "doc": "Insert the base64 encoded file here",
+            "editor": "DynamicValue",
+            "name": "base64_string",
+            "rank": 1,
+            "value": "text"
+        }
+    }
+}

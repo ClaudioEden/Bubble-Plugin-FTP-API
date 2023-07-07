@@ -1,0 +1,268 @@
+{
+    "calls": {
+        "AAK": {
+            "doc_link": "https://www.ftp-api.com/#authentication",
+            "headers": {
+                "ABv": {
+                    "doc": "Coloque o username conforme orientado pelo administrador do serviço de FTP. Ex.: usuario@ftp.com",
+                    "key": "username",
+                    "private": true,
+                    "value": ""
+                },
+                "ABw": {
+                    "doc": "Insira a senha do usuário de FTP neste campo",
+                    "key": "password",
+                    "private": true,
+                    "value": ""
+                },
+                "ABx": {
+                    "doc": "Altere se a porta destino for diferente da porta padrão 21",
+                    "key": "port",
+                    "private": true,
+                    "value": "21"
+                },
+                "ABy": {
+                    "doc": " FTP, FTPS OR SFTP",
+                    "key": "ftp-type",
+                    "private": true,
+                    "value": "FTP"
+                }
+            },
+            "initialized": true,
+            "method": "get",
+            "name": "Auth",
+            "publish_as": "action",
+            "rank": 0,
+            "ret_value": "api.1675125521035x332149858562998300.plugin_api.AAK",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAK\":{\"caption\":\"Auth\",\"fields\":{\"_p_Status\":{\"ret_value\":\"text\",\"caption\":\"Status\",\"sample_value\":\"SUCCESS\",\"path\":[\"Status\"]},\"_p_Message\":{\"ret_value\":\"text\",\"caption\":\"Message\",\"sample_value\":\"FTP Server Connected Successfully!\",\"path\":[\"Message\"]},\"_p_Code\":{\"ret_value\":\"number\",\"caption\":\"Code\",\"sample_value\":200,\"path\":[\"Code\"]}}}}",
+            "url": "https://www.ftp-api.com/ftp/checkconnection"
+        },
+        "AAS": {
+            "0": "A",
+            "1": "A",
+            "2": "R",
+            "body": "[{\"path\": \"<path>\", \"fileName\": \"<fileName>\", \"body\": \"<body>\"}]",
+            "body_params": {
+                "ABQ": {
+                    "key": "path",
+                    "private": true,
+                    "value": "."
+                },
+                "ABR": {
+                    "doc": "Apenas o nome do arquivo, não é a URL completa. Ex.: meuarquivo.pdf",
+                    "key": "fileName",
+                    "private": true,
+                    "value": "meuarquivo.pdf"
+                },
+                "ABS": {
+                    "doc": "Código Base64 resultado da codificação do arquivo. ",
+                    "key": "body",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "body_type": "json",
+            "doc_link": "https://www.ftp-api.com/#uploadFile",
+            "headers": {
+                "ACA": {
+                    "doc": "Coloque o username conforme orientado pelo administrador do serviço de FTP. Ex.: usuario@ftp.com",
+                    "key": "username",
+                    "private": true,
+                    "value": ""
+                },
+                "ACB": {
+                    "doc": "Insira a senha do usuário de FTP neste campo",
+                    "key": "password",
+                    "private": true,
+                    "value": ""
+                },
+                "ACC": {
+                    "doc": "Altere se a porta destino for diferente da porta padrão 21",
+                    "key": "port",
+                    "private": true,
+                    "value": "21"
+                },
+                "ACD": {
+                    "doc": " FTP, FTPS OR SFTP",
+                    "key": "ftp-type",
+                    "private": true,
+                    "value": "FTP"
+                }
+            },
+            "initialized": true,
+            "method": "post",
+            "name": "Upload a file",
+            "publish_as": "action",
+            "rank": 1,
+            "ret_value": "api.1675125521035x332149858562998300.plugin_api.AAS",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAS\":{\"caption\":\"Upload\",\"fields\":{\"_p_Status\":{\"ret_value\":\"text\",\"caption\":\"Status\",\"sample_value\":\"SUCCESS\",\"path\":[\"Status\"]},\"_p_Message\":{\"ret_value\":\"text\",\"caption\":\"Message\",\"sample_value\":\"File upload successfully\",\"path\":[\"Message\"]},\"_p_Code\":{\"ret_value\":\"number\",\"caption\":\"Code\",\"sample_value\":200,\"path\":[\"Code\"]},\"_p_Files\":{\"ret_value\":\"list.api.1675125521035x332149858562998300.plugin_api.AAS.Files\",\"caption\":\"Files\",\"path\":[\"Files\"]}}},\"plugin_api.AAS.Files\":{\"caption\":\"Upload File\",\"fields\":{\"_p_FileName\":{\"ret_value\":\"text\",\"caption\":\"FileName\",\"sample_value\":\"sample.txt\",\"path\":[\"FileName\"]},\"_p_Path\":{\"ret_value\":\"text\",\"caption\":\"Path\",\"sample_value\":\"/sample\",\"path\":[\"Path\"]},\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"sample_value\":\"sample\",\"path\":[\"body\"]},\"_p_Status\":{\"ret_value\":\"text\",\"caption\":\"Status\",\"sample_value\":\"SUCCESS\",\"path\":[\"Status\"]},\"_p_Message\":{\"ret_value\":\"text\",\"caption\":\"Message\",\"sample_value\":\"File Uploaded!\",\"path\":[\"Message\"]},\"_p_Code\":{\"ret_value\":\"number\",\"caption\":\"Code\",\"sample_value\":200,\"path\":[\"Code\"]}}}}",
+            "url": "https://www.ftp-api.com/ftp/upload"
+        },
+        "AAc": {
+            "0": "A",
+            "1": "A",
+            "2": "b",
+            "body": "'[{path:\"https://s3.amazonaws.com/appforest_uf/f1673348119477x224560913119434800/146019.png\", fileName:\"146019.png\", body:\"ZnRwLmVkZW4uY29tLmJy\"}]'",
+            "body_type": "json",
+            "doc_link": "https://www.ftp-api.com/#get-all-files",
+            "initialized": true,
+            "method": "get",
+            "name": "Download all files",
+            "publish_as": "action",
+            "rank": 4,
+            "ret_value": "api.1675125521035x332149858562998300.plugin_api.AAc",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.AAc\":{\"caption\":\"download all\",\"fields\":{\"_p_Status\":{\"ret_value\":\"text\",\"caption\":\"Status\",\"sample_value\":\"SUCCESS\",\"path\":[\"Status\"]},\"_p_Message\":{\"ret_value\":\"text\",\"caption\":\"Message\",\"sample_value\":\"File download successfully!\",\"path\":[\"Message\"]},\"_p_Code\":{\"ret_value\":\"number\",\"caption\":\"Code\",\"sample_value\":200,\"path\":[\"Code\"]},\"_p_Files\":{\"ret_value\":\"list.text\",\"caption\":\"Files\",\"path\":[\"Files\"]}}},\"text\":{\"caption\":\"download all File\",\"fields\":{\"_p_FileName\":{\"ret_value\":\"text\",\"caption\":\"FileName\",\"sample_value\":\"sample.txt\",\"path\":[\"FileName\"]},\"_p_Path\":{\"ret_value\":\"text\",\"caption\":\"Path\",\"sample_value\":\"/sample\",\"path\":[\"Path\"]},\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"sample_value\":\"base64Content\",\"path\":[\"body\"]},\"_p_LastModifiedDateTime\":{\"ret_value\":\"number\",\"caption\":\"LastModifiedDateTime\",\"sample_value\":1584509851000,\"path\":[\"LastModifiedDateTime\"]},\"_p_Status\":{\"ret_value\":\"text\",\"caption\":\"Status\",\"sample_value\":\"SUCCESS\",\"path\":[\"Status\"]},\"_p_Message\":{\"ret_value\":\"text\",\"caption\":\"Message\",\"sample_value\":\"File download successfully!\",\"path\":[\"Message\"]},\"_p_Code\":{\"ret_value\":\"number\",\"caption\":\"Code\",\"sample_value\":200,\"path\":[\"Code\"]}}}}",
+            "url": "https://www.ftp-api.com/ftp/download"
+        },
+        "ACF": {
+            "0": "A",
+            "1": "C",
+            "2": "E",
+            "body": "[{\"path\": \"<path>\", \"fileName\": \"<fileName>\"}]",
+            "body_params": {
+                "ABQ": {
+                    "doc": "Caminho do arquivo a ser apagado. Ex.: Se estiver no diretório raiz, use apenas /",
+                    "key": "path",
+                    "private": true,
+                    "value": "/"
+                },
+                "ABR": {
+                    "doc": "Apenas o nome do arquivo. NÃO é a URL completa. Ex.: meuarquivo.exe",
+                    "key": "fileName",
+                    "private": true,
+                    "value": "meuarquivo.exe"
+                }
+            },
+            "body_type": "json",
+            "doc_link": "https://www.ftp-api.com/#deleteFile",
+            "headers": {
+                "ACA": {
+                    "doc": "Coloque o username conforme orientado pelo administrador do serviço de FTP. Ex.: usuario@ftp.com",
+                    "key": "username",
+                    "private": true,
+                    "value": ""
+                },
+                "ACB": {
+                    "doc": "Insira a senha do usuário de FTP neste campo",
+                    "key": "password",
+                    "private": true,
+                    "value": ""
+                },
+                "ACC": {
+                    "doc": "Altere se a porta destino for diferente da porta padrão 21",
+                    "key": "port",
+                    "private": true,
+                    "value": "21"
+                },
+                "ACD": {
+                    "doc": " FTP, FTPS OR SFTP",
+                    "key": "ftp-type",
+                    "private": true,
+                    "value": "FTP"
+                }
+            },
+            "initialized": true,
+            "method": "delete_method",
+            "name": "Delete a file",
+            "publish_as": "action",
+            "rank": 2,
+            "ret_value": "api.1675125521035x332149858562998300.plugin_api.ACF",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ACF\":{\"caption\":\"Delete\",\"fields\":{\"_p_Status\":{\"ret_value\":\"text\",\"caption\":\"Status\",\"sample_value\":\"SUCCESS\",\"path\":[\"Status\"]},\"_p_Message\":{\"ret_value\":\"text\",\"caption\":\"Message\",\"sample_value\":\"Files deleted successfully!\",\"path\":[\"Message\"]},\"_p_Files\":{\"ret_value\":\"list.api.1675125521035x332149858562998300.plugin_api.ACF.Files\",\"caption\":\"Files\",\"path\":[\"Files\"]},\"_p_Code\":{\"ret_value\":\"number\",\"caption\":\"Code\",\"sample_value\":200,\"path\":[\"Code\"]}}},\"plugin_api.ACF.Files\":{\"caption\":\"Delete File\",\"fields\":{\"_p_Path\":{\"ret_value\":\"text\",\"caption\":\"Path\",\"sample_value\":\"/\",\"path\":[\"Path\"]},\"_p_Status\":{\"ret_value\":\"text\",\"caption\":\"Status\",\"sample_value\":\"SUCCESS\",\"path\":[\"Status\"]},\"_p_Message\":{\"ret_value\":\"text\",\"caption\":\"Message\",\"sample_value\":\"File deleted successfully!\",\"path\":[\"Message\"]},\"_p_FileName\":{\"ret_value\":\"text\",\"caption\":\"FileName\",\"sample_value\":\"ag12345xyz4321.xml\",\"path\":[\"FileName\"]},\"_p_Code\":{\"ret_value\":\"number\",\"caption\":\"Code\",\"sample_value\":200,\"path\":[\"Code\"]}}}}",
+            "url": "https://www.ftp-api.com/ftp/delete"
+        },
+        "ACJ": {
+            "0": "A",
+            "1": "C",
+            "2": "I",
+            "body": "[{\"path\": \"<path>\", \"fileName\": \"<fileName>\", \"body\": \"<body>\"}]",
+            "body_params": {
+                "ABQ": {
+                    "key": "path",
+                    "private": true,
+                    "value": "."
+                },
+                "ABR": {
+                    "doc": "Apenas o nome do arquivo, não é a URL completa. Ex.: meuarquivo.pdf",
+                    "key": "fileName",
+                    "private": true,
+                    "value": "meuarquivo.pdf"
+                },
+                "ABS": {
+                    "doc": "Código Base64 resultado da codificação do arquivo. ",
+                    "key": "body",
+                    "private": true,
+                    "value": ""
+                }
+            },
+            "body_type": "json",
+            "doc_link": "https://www.ftp-api.com/#uploadFile",
+            "headers": {
+                "ABz": {
+                    "doc": "Informe a URL do servidor de ftp SEM o https:\\\\ na frente. Ex.: ftp.meudominio.com",
+                    "key": "ftp-host",
+                    "private": true,
+                    "value": ""
+                },
+                "ACA": {
+                    "doc": "Coloque o username conforme orientado pelo administrador do serviço de FTP. Ex.: usuario@ftp.com",
+                    "key": "username",
+                    "private": true,
+                    "value": ""
+                },
+                "ACB": {
+                    "doc": "Insira a senha do usuário de FTP neste campo",
+                    "key": "password",
+                    "private": true,
+                    "value": ""
+                },
+                "ACC": {
+                    "doc": "Altere se a porta destino for diferente da porta padrão 21",
+                    "key": "port",
+                    "private": true,
+                    "value": "21"
+                },
+                "ACD": {
+                    "doc": " FTP, FTPS OR SFTP",
+                    "key": "ftp-type",
+                    "private": true,
+                    "value": "FTP"
+                }
+            },
+            "initialized": true,
+            "method": "get",
+            "name": "Download a file",
+            "publish_as": "action",
+            "rank": 3,
+            "ret_value": "api.1675125521035x332149858562998300.plugin_api.ACJ",
+            "should_reinitialize": true,
+            "types": "{\"plugin_api.ACI\":{\"caption\":\"download one file\",\"fields\":{\"_p_Status\":{\"ret_value\":\"text\",\"caption\":\"Status\",\"sample_value\":\"SUCCESS\",\"path\":[\"Status\"]},\"_p_Message\":{\"ret_value\":\"text\",\"caption\":\"Message\",\"sample_value\":\"File download successfully!\",\"path\":[\"Message\"]},\"_p_Files\":{\"ret_value\":\"list.api.1675125521035x332149858562998300.plugin_api.ACI.Files\",\"caption\":\"Files\",\"path\":[\"Files\"]},\"_p_Code\":{\"ret_value\":\"number\",\"caption\":\"Code\",\"sample_value\":200,\"path\":[\"Code\"]}}},\"plugin_api.ACI.Files\":{\"caption\":\"download one file File\",\"fields\":{\"_p_Path\":{\"ret_value\":\"text\",\"caption\":\"Path\",\"sample_value\":\"/\",\"path\":[\"Path\"]},\"_p_Status\":{\"ret_value\":\"text\",\"caption\":\"Status\",\"sample_value\":\"SUCCESS\",\"path\":[\"Status\"]},\"_p_LastModifiedDateTime\":{\"ret_value\":\"number\",\"caption\":\"LastModifiedDateTime\",\"sample_value\":1688504674000,\"path\":[\"LastModifiedDateTime\"]},\"_p_Message\":{\"ret_value\":\"text\",\"caption\":\"Message\",\"sample_value\":\"File download successfully!\",\"path\":[\"Message\"]},\"_p_FileName\":{\"ret_value\":\"text\",\"caption\":\"FileName\",\"sample_value\":\"My_file.xml\",\"path\":[\"FileName\"]},\"_p_body\":{\"ret_value\":\"text\",\"caption\":\"body\",\"sample_value\":\"PHJlY29yZHM+CiAgPHJlY29yZD4KICAgIDxuYW1lPkpvaG4gRG9lPC9uYW1lPgogICAgPGJpcnRoZGF0ZT4wMS8wMS8xOTgwPC9iaXJ0aGRhdGU+CiAgICA8YWRkcmVzcz4xMjMgTWFpbiBTdCwgQW55dG93biBVU0E8L2FkZHJlc3M+CiAgPC9yZWNvcmQ+CiAgPHJlY29yZD4KICAgIDxuYW1lPkphbmUgRG9lPC9uYW1lPgogICAgPGJpcnRoZGF0ZT4wMy8wMy8xOTg1PC9iaXJ0aGRhdGU+CiAgICA8YWRkcmVzcz40NTYgUGFyayBBdmUsIEFueXRvd24gVVNBPC9hZGRyZXNzPgogIDwvcmVjb3JkPgogIDxyZWNvcmQ+CiAgICA8bmFtZT5Cb2IgU21pdGg8L25hbWU+CiAgICA8YmlydGhkYXRlPjA1LzA1LzE5OTA8L2JpcnRoZGF0ZT4KICAgIDxhZGRyZXNzPjc4OSBNYXJrZXQgU3QsIEFueXRvd24gVVNBPC9hZGRyZXNzPgogIDwvcmVjb3JkPgo8L3JlY29yZHM+Cg==\",\"path\":[\"body\"]},\"_p_Code\":{\"ret_value\":\"number\",\"caption\":\"Code\",\"sample_value\":200,\"path\":[\"Code\"]}}}}",
+            "url": "https://www.ftp-api.com/ftp/download?fileName=[fileName]",
+            "url_params": {
+                "ACK": {
+                    "key": "fileName",
+                    "private": true,
+                    "value": "meuarquivo.exe"
+                }
+            }
+        }
+    },
+    "human": "FTP-API",
+    "shared_headers": {
+        "ABC": {
+            "key": "Content-Type",
+            "private": true,
+            "value": "application/json",
+            "visibility": "hidden"
+        },
+        "ACM": {
+            "doc": "Informe a URL do servidor de ftp SEM o https:\\\\ na frente. Ex.: ftp.meudominio.com",
+            "key": "ftp-host",
+            "private": true,
+            "visibility": "secret"
+        }
+    }
+}
